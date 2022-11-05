@@ -3,11 +3,17 @@ app = Flask(__name__)  # Flask 객체 생성
  
 @app.route('/')
 def index():
-    return render_template('Test.html')
- 
-@app.route('/login')
-def login():
-    return '<h1>로그인</h1>'
+    return render_template('mainpage.html')
+@app.route('/dc')
+def dcPage():
+    return render_template('DCpage.html')
+@app.route('/dp')
+def dpPage():
+    return render_template('DPpage.html')
+@app.route('/regist')
+def registPage():
+    return render_template('registPage.html')
+
 # DP,DC 기능 추가
 # DP 화면 추가
 
